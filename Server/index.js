@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const cors = require("cors");
 const DonateModel = require('./models/donate.model')
+const VolunteerModel = require('./models/volunteer.model')
 
 
 const app = express()
@@ -50,8 +51,17 @@ mongoose.connect(db).then(() => {
 
 app.post('/donation-form', (req, res) => {
     //console.log(req.body);
-    DonateModel.create(req.body)
+    const donateData = req.body;
+    DonateModel.create(donateData)
     .then(employees => res.json(employees))
+    .catch(err => res.json(err))
+})
+
+app.post('/volunteer-form' , (req,res)=>{
+    const volunteerData = req.body; 
+    console.log(volunteerData)
+    VolunteerModel.create(volunteerData)
+    .then(volunteer => res.json(volunteer))
     .catch(err => res.json(err))
 })
 

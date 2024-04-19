@@ -19,7 +19,7 @@ const Header = () => {
               </div>
               <div className="header-2-3">
               <Link to={"/Form"}><button id='donate'>Donate</button></Link>
-              <Link to={""}><button id='donate'>Volunteer</button></Link>
+              <Link to={"/VolunteerForm"}><button id='donate'>Volunteer</button></Link>
               </div>
           </div>
         </div>

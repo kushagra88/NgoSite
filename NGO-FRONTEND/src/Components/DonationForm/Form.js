@@ -20,7 +20,7 @@ const Form = () => {
   //const navigate = useNavigate();
   // const navigateToPage = useNavigate();
 
-  const handleSubmit = async (eventValue) => {
+  const handleSubmit = async () => {
     // eventValue.preventDefault();
     // axios.post('http://localhost:3001/donation-form', { name, email, phone, address, donation, amount, choice, pickup })
     //   .then(result => console.log(result))

@@ -1,0 +1,30 @@
+body{
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+}
+
+.VolunteerForm{
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 1rem;   
+    margin-bottom: 1rem;   
+
+}
+
+
+.VolunteerForm h2 {
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: -2rem;
+ 
+}
+
+.VolunteerForm .btn{
+    margin: 1rem 30%;
+    margin-bottom: -2rem;
+    color: black;
+    font-weight: 600;
+}

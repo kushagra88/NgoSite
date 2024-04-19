@@ -58,10 +58,10 @@ const Footer = () => {
                             <p>2024 &copy; All Rights Reserved | Designed and Developed by ConsultIT</p>
                         </div>
                         <div className="r-3-c-2">
-                            <i class="fab fa-instagram"></i>&nbsp;&nbsp;
-                            <i class="fab fa-facebook-square"></i>&nbsp;&nbsp;
-                            <i class="fab fa-twitter-square"></i>&nbsp;&nbsp;
-                            <i class="fab fa-google"></i>
+                            <i className="fab fa-instagram"></i>&nbsp;&nbsp;
+                            <i className="fab fa-facebook-square"></i>&nbsp;&nbsp;
+                            <i className="fab fa-twitter-square"></i>&nbsp;&nbsp;
+                            <i className="fab fa-google"></i>
                         </div>
                     </div>
                 </div>

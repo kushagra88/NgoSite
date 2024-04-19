@@ -19,6 +19,7 @@ import Footer from "./Components/Footer/Footer";
 import Blog from "./Components/Blog/Blog";
 import Services from "./Components/Services/Services";
 import Gallery from "./Components/Gallery/Gallery";
+import VolunteerForm from "./Components/VolunteerForm/VolunteerForm"
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
     path:"/Gallery",
     element:<Gallery />
   },
+  {
+    path:"/VolunteerForm",
+    element:<VolunteerForm />
+  }
 
 
 ]);
