@@ -2,9 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const cors = require("cors");
-const DonateModel = require('./models/donate.model');
-const VolunteerModel = require('./models/volunteer.model');
-const ContactUsModel = require('./models/contact.model');
+
 
 let PORT = 3001;
 
