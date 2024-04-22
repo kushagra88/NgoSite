@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../Header/Button'
 import "./Footer.css"
 import LinkProp from './LinkProps'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -48,7 +48,7 @@ const Footer = () => {
                             <LinkProp link={"/Contact"} props={"Contact"} />
                         </div>
                         <div className="r-2-c-2">
-                            <Button props={"Donate Now"} clr={"#28cc66"} link={"/Form"} style />
+                            <Link to={"/Form"}><button id='donate'>Donate</button></Link>
                         </div>
                     </div>
                 </div>
@@ -58,10 +58,10 @@ const Footer = () => {
                             <p>2024 &copy; All Rights Reserved | Designed and Developed by ConsultIT</p>
                         </div>
                         <div className="r-3-c-2">
-                            <i class="fab fa-instagram"></i>&nbsp;&nbsp;
-                            <i class="fab fa-facebook-square"></i>&nbsp;&nbsp;
-                            <i class="fab fa-twitter-square"></i>&nbsp;&nbsp;
-                            <i class="fab fa-google"></i>
+                            <i className="fab fa-instagram"></i>&nbsp;&nbsp;
+                            <i className="fab fa-facebook-square"></i>&nbsp;&nbsp;
+                            <i className="fab fa-twitter-square"></i>&nbsp;&nbsp;
+                            <i className="fab fa-google"></i>
                         </div>
                     </div>
                 </div>

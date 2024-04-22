@@ -6,7 +6,7 @@ import "./About.css"
 const About = () => {
     return (
         <>
-        <Header />
+            <Header />
             <div className="main_about">
                 <div className="main_content_about">
                     <h2>What We Do?</h2>
@@ -51,9 +51,9 @@ const About = () => {
                 </div>
             </div>
             <hr />
-                <Footer />
-            </>
-        )
-    }
+            <Footer />
+        </>
+    )
+}
 
 export default About

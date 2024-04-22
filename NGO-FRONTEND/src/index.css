@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-image: linear-gradient(to top, #f6ded4 2%, #f0f0f0 100%);
 }
 
 code {
@@ -15,10 +15,23 @@ code {
         monospace;
 }
 
-.center{
+.center {
     max-width: 80%;
-    margin: 0 auto ;
+    margin: 0 auto;
 }
+
+.padding{
+    padding: 4rem;
+}
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+}
+
 
 .container {
     max-width: 600px;
@@ -42,7 +55,7 @@ select {
     box-sizing: border-box;
 }
 
-.container > button {
+.container>button {
     background-color: #21e427;
     color: white;
     padding: 10px 20px;
@@ -148,11 +161,11 @@ select {
     text-align: center;
 }
 
-.donate_container > p {
+.donate_container>p {
     text-align: center;
     height: 10rem;
     font-size: 20px;
-    
+
 }
 
 .donate_container {
@@ -162,10 +175,10 @@ select {
     margin-top: 2rem;
     height: 100%;
     width: 100%;
-    
+
 }
 
-.donate_container > h1 {
+.donate_container>h1 {
     color: rgb(79, 255, 88);
     padding: 2rem;
     height: 10rem;
@@ -227,4 +240,8 @@ select {
     padding: 15px;
     font-size: 20px;
     line-height: 25px;
+}
+
+p {
+    text-align: justify;
 }

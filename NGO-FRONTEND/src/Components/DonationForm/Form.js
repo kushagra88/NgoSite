@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 //import { useNavigate } from 'react-router';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -8,8 +8,7 @@ import './Form.css'
 
 const Form = () => {
 
-  const [name, setFirstName] = useState()
-  // const [lastName, setLastName] = useState()
+  const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
   const [address, setAddress] = useState()
@@ -21,7 +20,7 @@ const Form = () => {
   //const navigate = useNavigate();
   // const navigateToPage = useNavigate();
 
-  const handleSubmit = async (eventValue) => {
+  const handleSubmit = async () => {
     // eventValue.preventDefault();
     // axios.post('http://localhost:3001/donation-form', { name, email, phone, address, donation, amount, choice, pickup })
     //   .then(result => console.log(result))
@@ -32,18 +31,16 @@ const Form = () => {
     }
     catch(error) {
       console.log(error);
-    }
+    } 
   }
 
   //For quantity
-  const [quantity,setQuantity] = useState(0)
   const minQuantity = (e) => {
-    setQuantity(e.target.value);
     setPickupChoice(e.target.value);
   }
 
   const handleQuantity = (event) => {
-    if( quantity < 15 ){
+    if( pickup < 15 ){
         alert("Quantity Should be more then 15")
         event.preventDefault();
       }
@@ -56,9 +53,7 @@ const Form = () => {
 
   
   //For making choices in books ,clothes , shoes(pickup or courier)
-  const [showChoice, setShowChoice] = useState("")
   const handleChoice = (e) => {
-      setShowChoice(e.target.value)
       setUserChoice(e.target.value)
   }
 
@@ -111,8 +106,8 @@ const Form = () => {
       <div className="container">
         <h2>Donation Form</h2>
         <form id="donationForm" onSubmit={handleSubmit}>
-          <label htmlFor="Name">Name:</label>
-          <input type="text" id="name" name="name" onChange={(e) => setFirstName(e.target.value)} required />
+          <label htmlFor="Name"> Full Name:</label>
+          <input type="text" id="name" name="name" onChange={(e) => setName(e.target.value)} required />
           {/* <label htmlFor="lastName">Last Name:</label>
           <input type="text" id="name" name="lastName" onChange={(e) => setLastName(e.target.value)} required /> */}
 
@@ -153,7 +148,7 @@ const Form = () => {
                 <input type="radio" name="choice" value="pickup" onChange={handleChoice}/>Pickup &nbsp; &nbsp; &nbsp; 
                 <input type="radio" name="choice" value="courier" onChange={handleChoice} />Courier <br />
                 {
-                    showChoice==="pickup" && (
+                    choice==="pickup" && (
                       <>
                         <label htmlFor="qunatity">Quantity:</label><br />
                         <input type="number" name='pickup' id="pickup" placeholder='Number should be more then 15' onChange={minQuantity} />
@@ -162,8 +157,9 @@ const Form = () => {
                       </>
                     )
                 }
+                
                 {
-                    showChoice==="courier" && (
+                    choice==="courier" && (
                       <>
                         <button type="submit" id="submitButton">Proceed to Next Page</button>
                       </>
